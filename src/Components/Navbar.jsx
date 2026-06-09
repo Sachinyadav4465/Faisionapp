@@ -40,7 +40,6 @@ const Navbar = ({ setShowCart, cartItems = [] }) => {
             <div className={`bar ${isMenuOpen ? "bar3" : ""}`}></div>
           </button>
 
-          {/* Desktop Menu - Replaced with <Link to="..."> */}
           <nav className="d-none d-lg-flex gap-4">
             <Link to="/" className="navLink">HOME</Link>
             <Link to="/sarees" className="navLink">SAREES</Link>
@@ -48,28 +47,27 @@ const Navbar = ({ setShowCart, cartItems = [] }) => {
             <Link to="/contact" className="navLink">CONTACT</Link>
           </nav>
 
-          {/* Logo - Wrap with Link to redirect Home on click */}
-          <div className="logo">
+          <div className="logo text-center">
             <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
-              {/* AYUSH COUTURE */}
+              AYUSH COUTURE
             </Link>
           </div>
 
-          {/* Icons Section */}
+          
           <div className="d-flex align-items-center gap-3 gap-md-4 main-nav-icons">
-            {/* Search Button */}
+         
             <button className="iconBtn btn p-0 d-flex align-items-center" aria-label="Search">
               <FiSearch className="nav-react-icon" />
             </button>
 
-            {/* User Profile Button */}
+            
             <Link to="/login">
             <button className="iconBtn btn p-0 d-flex align-items-center" aria-label="Account">
               <FiUser className="nav-react-icon" />
             </button>
             </Link>
 
-            {/* Cart Button with Count Badge */}
+          
             <button
               className="iconBtn btn p-0 position-relative d-flex align-items-center"
               onClick={() => setShowCart(true)}
@@ -84,7 +82,7 @@ const Navbar = ({ setShowCart, cartItems = [] }) => {
             </button>
           </div>
 
-          {/* Mobile Menu - Replaced with <Link to="..."> */}
+          
           <div className={`mobileMenu ${isMenuOpen ? "mobileMenuOpen" : ""}`}>
             <Link to="/" className="mobileNavLink" onClick={() => setIsMenuOpen(false)}>HOME</Link>
             <Link to="/sarees" className="mobileNavLink" onClick={() => setIsMenuOpen(false)}>SAREES</Link>

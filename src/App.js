@@ -9,14 +9,17 @@ import Footer from './Components/Footer';
 
 // Pages & Dynamic Content
 import Home from './pages/Home'; 
-import Product from './pages/Products';
-import BestSeller from './pages/BestSeller';
-import Testimonial from './pages/Testimonial';
+//import Product from './pages/Products';
+//import BestSeller from './pages/BestSeller';
+//import Testimonial from './pages/Testimonial';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout'; 
 import Login from './pages/Login'
 import Register from './pages/Register';
 import ProductDetails from './pages/ProductDetails';
+import Contact from './Components/Contact'
+import Sarees from './pages/Sarees';
+import Lehengas from './pages/Lehengas';
 import './Styles/Styles.css';
 
 function App() {
@@ -35,7 +38,7 @@ function App() {
     { id: 8, badge: 'Exclusive', title: 'Banarasi Silk Dupatta', price: 4200, oldPrice: '₹7k', tagline: 'EXCLUSIVE TEXTURES', description: 'Rich heavy silk Banarasi dupatta woven by master artisans.', img: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=600' }
   ];
 
-  // Super clean push mechanism
+  
   const addToCart = (product) => {
     setCartItems((prevItems) => {
       const exists = prevItems.find((item) => item.id === product.id && item.size === product.size);
@@ -62,17 +65,18 @@ function App() {
         <Navbar setShowCart={setShowCart} cartItems={cartItems} />
 
         <Routes>
-          {/* 2. Saree/Product route par productItems data array pass kiya */}
+        
           <Route path="/" element={<Home addToCart={addToCart} />} />
-          <Route path="/sarees" element={<Product addToCart={addToCart} productItems={productItems} />} />
-          <Route path="/lehengas" element={<BestSeller addToCart={addToCart} />} />
-          <Route path="/contact" element={<Testimonial />} />
+          <Route path="/sarees" element={<Sarees addToCart={addToCart} productItems={productItems} />} />
+          <Route path="/lehengas" element={<Lehengas addToCart={addToCart} />} />
+          {/* <Route path="/contact" element={<Testimonial />} /> */}
           
           <Route path="/checkout" element={<Checkout cartItems={cartItems} />} />
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
+          <Route path='/contact' element={<Contact/>}/>
           
-          {/* 3. FIXED: Ab details route ke paas productItems array data hai, data load 100% chalega */}
+          
           <Route path="/product/:id" element={<ProductDetails addToCart={addToCart} productItems={productItems} />} />
         </Routes>
 

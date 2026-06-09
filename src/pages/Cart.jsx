@@ -1,6 +1,5 @@
 import React from "react";
 import { toast } from "react-toastify";
-// Navigate ko hata diya kyunki uski zaroorat nahi hai, sirf useNavigate kafi hai
 import { useNavigate } from "react-router-dom";
 
 const Cart = ({
@@ -8,7 +7,7 @@ const Cart = ({
   setCartItems,
   setShowCart,
 }) => {
-  // 1. Hook ko ekdum top par sahi jagah declare kiya
+  
   const navigate = useNavigate();
 
   const increaseQty = (id) => {
@@ -70,10 +69,10 @@ const Cart = ({
     0
   );
 
-  // 2. Checkout click handle karne ke liye clean function
+  
   const handleCheckout = () => {
-    setShowCart(false); // Drawer band hoga
-    navigate("/checkout"); // Checkout page par redirect hoga
+    setShowCart(false); 
+    navigate("/checkout"); 
   };
 
   return (
@@ -104,7 +103,7 @@ const Cart = ({
         <div className="cartBody">
           {cartItems.length === 0 ? (
             <div className="emptyCart">
-              <h4>Your Cart Is Empty 🛒</h4>
+              <h4>Your Cart Is Empty </h4>
             </div>
           ) : (
             cartItems.map((item) => (
@@ -199,7 +198,7 @@ const Cart = ({
             </strong>
           </div>
 
-          {/* 3. onClick par handleCheckout call kiya aur khali cart par disabled lagaya */}
+         
           <button 
             className="checkoutBtn" 
             onClick={handleCheckout}

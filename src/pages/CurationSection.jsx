@@ -26,7 +26,7 @@ const CurationSection = () => {
       <div className="container text-center">
         
         
-        <div className="luxeSubtitle">✨ LUXE DIRECTORY</div>
+        <div className="luxeSubtitle"> LUXE DIRECTORY</div>
         
         
         <h2 className="curationTitle mb-5">The Curation</h2>

@@ -1948,3 +1948,74 @@
   background-color: rgba(226, 199, 146, 0.05) !important;
   border-color: #E2C792 !important;
 }
+
+
+/* Custom Input Overrides For Boutique Dark Green Fields */
+.premium-input {
+  background-color: rgba(226, 199, 146, 0.04) !important;
+  border: 1px solid rgba(226, 199, 146, 0.2) !important;
+  border-radius: 0px !important;
+  color: #E2C792 !important;
+}
+
+.premium-input:focus {
+  background-color: rgba(226, 199, 146, 0.08) !important;
+  border-color: #E2C792 !important;
+  box-shadow: none !important;
+}
+
+/* Floating labels adjustments for dark green contrast */
+.form-floating > .premium-input ~ label {
+  color: rgba(226, 199, 146, 0.5) !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.1em !important;
+}
+
+.form-floating > .premium-input:focus ~ label,
+.form-floating > .premium-input:not(:placeholder-shown) ~ label {
+  color: #E2C792 !important;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem) !important;
+}
+
+/* Button Animations */
+.main-submit-btn:hover {
+  background-color: #ffffff !important;
+  color: #061711 !important;
+  letter-spacing: 0.2em !important;
+}
+
+.map-gold-frame {
+  transition: border-color 0.4s ease;
+}
+.map-gold-frame:hover {
+  border-color: rgba(226, 199, 146, 0.6) !important;
+}
+
+/* Range Slider Track Custom Styling */
+.premium-range-slider {
+  -webkit-appearance: none;
+  height: 4px;
+  background: rgba(226, 199, 146, 0.2);
+  outline: none;
+}
+
+.premium-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #E2C792;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.premium-range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.3);
+}
+
+/* Category Items hover style */
+.category-filter-item:hover {
+  color: #ffffff !important;
+  padding-left: 4px;
+}

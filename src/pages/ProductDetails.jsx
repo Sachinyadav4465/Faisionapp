@@ -4,25 +4,22 @@ import { FiHeart, FiShoppingBag, FiShield, FiTruck } from "react-icons/fi";
 import { useParams, useNavigate } from "react-router-dom";
 
 const ProductDetails = ({ addToCart, productItems }) => {
-  const { id } = useParams(); // URL se id nikalega (jaise '1' ya '2')
+  const { id } = useParams(); 
   const navigate = useNavigate();
 
-  // URL ki id ke hisab se product dhoondo array se
   const product = productItems?.find((item) => item.id === parseInt(id));
 
-  // Agar product array mein na mile toh page par blank hone se bachane ke liye state safety handler
   const [selectedImage, setSelectedImage] = useState("");
   const [selectedSize, setSelectedSize] = useState("M");
   const sizes = ["S", "M", "L", "XL"];
 
-  // Jab product load ho, uski default image state set karo
   useEffect(() => {
     if (product) {
       setSelectedImage(product.img);
     }
   }, [product]);
 
-  // Agar routing galat ho ya product na mile toh simple safe error return screen
+ 
   if (!product) {
     return (
       <div className="text-center py-5" style={{ backgroundColor: "#061711", color: "#E2C792", minHeight: "100vh" }}>
@@ -49,7 +46,6 @@ const ProductDetails = ({ addToCart, productItems }) => {
       <div className="container mt-5">
         <div className="row g-5">
           
-          {/* LEFT SIDE: MULTI-IMAGE THUMBNAIL TRACKER */}
           <div className="col-md-2 col-lg-1 order-2 order-md-1">
             <div className="d-flex flex-row flex-md-column gap-3 justify-content-center justify-content-md-start">
               {/* Main Image fallback thumbnail display */}

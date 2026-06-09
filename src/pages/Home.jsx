@@ -7,6 +7,7 @@ import Banner from './Banner';
 import BestSeller from './BestSeller';
 import Testimonial from './Testimonial';
 
+
 const Home = ({ addToCart }) => {
   return (
     <>

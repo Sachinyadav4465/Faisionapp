@@ -3,14 +3,14 @@ import { FiLock, FiTruck, FiRefreshCw, FiArrowLeft } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 const Checkout = ({ cartItems = [] }) => {
-  // Form States (Bina kisi extra library ke handle karne ke liye)
+  
   const [formData, setFormData] = useState({
     email: '', firstName: '', lastName: '', address: '', city: '', pincode: '', phone: ''
   });
 
-  // Calculate Prices
+  
   const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  const total = subtotal; // Shipping complimentary hai
+  const total = subtotal; 
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -22,10 +22,10 @@ const Checkout = ({ cartItems = [] }) => {
   };
 
   return (
-    <div className="py-5" style={{ backgroundColor: '#061711', color: '#E2C792', minHeight: '100vh' }}>
+    <div className="py-5" style={{ backgroundColor: 'rgb(226, 199, 146);', color: '#E2C792', minHeight: '100vh' }}>
       <div className="container mt-4">
         
-        {/* Back Link */}
+  
         <div className="mb-4">
           <Link to="/" className="text-decoration-none d-inline-flex align-items-center gap-2" style={{ color: '#E2C792', fontSize: '0.9rem', letterSpacing: '0.05em' }}>
             <FiArrowLeft /> BACK TO SHOPPING
@@ -37,7 +37,7 @@ const Checkout = ({ cartItems = [] }) => {
         </h2>
 
         <div className="row g-5">
-          {/* Left Column: Shipping & Billing Form */}
+          
           <div className="col-lg-7">
             <form onSubmit={handleSubmit} className="d-flex flex-column gap-4">
               
@@ -100,12 +100,12 @@ const Checkout = ({ cartItems = [] }) => {
             </form>
           </div>
 
-          {/* Right Column: Order Summary (As per your design) */}
+          
           <div className="col-lg-5">
             <div className="p-4 sticky-top" style={{ backgroundColor: 'rgba(226, 199, 146, 0.02)', border: '1px solid rgba(226, 199, 146, 0.2)', top: '100px' }}>
               <h4 className="mb-4 fw-bold" style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.4rem' }}>Order Summary</h4>
               
-              {/* Product Mini-List */}
+              
               <div className="checkout-items-preview mb-4 overflow-y-auto" style={{ maxHeight: '240px' }}>
                 {cartItems.map(item => (
                   <div key={item.id} className="d-flex gap-3 mb-3 pb-3" style={{ borderBottom: '1px solid rgba(226, 199, 146, 0.1)' }}>
@@ -119,7 +119,7 @@ const Checkout = ({ cartItems = [] }) => {
                 ))}
               </div>
 
-              {/* Math Layout */}
+              
               <div className="d-flex justify-content-between align-items-center mb-2" style={{ fontSize: '0.9rem', color: 'rgba(226, 199, 146, 0.7)' }}>
                 <span>Subtotal</span>
                 <span>₹{subtotal.toLocaleString()}</span>
@@ -135,7 +135,7 @@ const Checkout = ({ cartItems = [] }) => {
                 <span className="fs-4 fw-bold" style={{ color: '#E2C792' }}>₹{total.toLocaleString()}</span>
               </div>
 
-              {/* Trust Badges matching your second image */}
+            
               <div className="d-flex flex-column gap-3 pt-3" style={{ borderTop: '1px solid rgba(226, 199, 146, 0.1)', fontSize: '0.8rem', color: 'rgba(226, 199, 146, 0.7)' }}>
                 <div className="d-flex align-items-center gap-2">
                   <FiLock style={{ color: '#E2C792' }} />

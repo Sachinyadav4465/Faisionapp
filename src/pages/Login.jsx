@@ -12,9 +12,9 @@ const Login = () => {
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    // Tumhari authentication validation logic yahan aayegi
+
     alert("Logged in successfully!");
-    navigate("/"); // Login hote hi home page par redirect
+    navigate("/"); 
   };
 
   return (
@@ -25,7 +25,7 @@ const Login = () => {
       <div className="container" style={{ maxWidth: "1100px" }}>
         <div className="row g-0 align-items-center" style={{ minHeight: "550px" }}>
           
-          {/* Left Column: Minimal Form Card (Slightly angled overlay design as per image) */}
+      
           <div 
             className="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center position-relative h-100" 
             style={{ 
@@ -85,7 +85,7 @@ const Login = () => {
                 />
               </div>
 
-              {/* Submit Sign In Button */}
+              
               <button 
                 type="submit" 
                 className="btn w-100 d-flex justify-content-between align-items-center mt-3 login-action-btn"
@@ -96,7 +96,7 @@ const Login = () => {
 
             </form>
 
-            {/* Bottom Register Redirection */}
+           
             <div className="mt-4 pt-2">
               <Link 
                 to="/register" 
@@ -107,12 +107,12 @@ const Login = () => {
             </div>
           </div>
 
-          {/* Right Column: Premium Model Cut-out Preview Display */}
+        
           <div 
             className="col-lg-7 d-none d-lg-block h-100 position-relative text-center"
             style={{ zIndex: 1 }}
           >
-            {/* Soft backdrop circle glow for luxury visual appeal */}
+           
             <div 
               className="position-absolute top-50 start-50 translate-middle rounded-circle"
               style={{ 
@@ -124,7 +124,7 @@ const Login = () => {
               }}
             ></div>
             
-            {/* Model Image element */}
+          
             <img 
               src='https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=600' // Replace with your exact model cut-out image URL asset
               alt="Ayush Couture Traditional Heirloom Model Presentation" 

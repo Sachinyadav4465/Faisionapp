@@ -24,9 +24,9 @@ const Register = () => {
       return;
     }
 
-    // Tumhari API / Registration handling yahan aayegi
+    
     alert("Account Created Successfully!");
-    navigate("/login"); // Account bante hi login page par bhej do
+    navigate("/login"); 
   };
 
   return (
@@ -37,7 +37,7 @@ const Register = () => {
       <div className="container" style={{ maxWidth: "1100px" }}>
         <div className="row g-0 align-items-center" style={{ minHeight: "600px" }}>
           
-          {/* Left Column: Register Form Card */}
+          
           <div 
             className="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center position-relative h-100" 
             style={{ 
@@ -61,7 +61,7 @@ const Register = () => {
 
             <form onSubmit={handleRegisterSubmit} className="d-flex flex-column gap-3">
               
-              {/* Full Name Input */}
+          
               <div className="position-relative">
                 <FiUser 
                   className="position-absolute start-0 top-50 translate-middle-y ms-3" 
@@ -79,7 +79,7 @@ const Register = () => {
                 />
               </div>
 
-              {/* Email Input */}
+            
               <div className="position-relative">
                 <FiMail 
                   className="position-absolute start-0 top-50 translate-middle-y ms-3" 
@@ -97,7 +97,7 @@ const Register = () => {
                 />
               </div>
 
-              {/* Phone Input */}
+              
               <div className="position-relative">
                 <FiPhone 
                   className="position-absolute start-0 top-50 translate-middle-y ms-3" 
@@ -115,7 +115,7 @@ const Register = () => {
                 />
               </div>
 
-              {/* Password Input */}
+              
               <div className="position-relative">
                 <FiLock 
                   className="position-absolute start-0 top-50 translate-middle-y ms-3" 
@@ -133,7 +133,7 @@ const Register = () => {
                 />
               </div>
 
-              {/* Confirm Password Input */}
+              
               <div className="position-relative">
                 <FiLock 
                   className="position-absolute start-0 top-50 translate-middle-y ms-3" 
@@ -151,7 +151,7 @@ const Register = () => {
                 />
               </div>
 
-              {/* Register Action Button */}
+            
               <button 
                 type="submit" 
                 className="btn w-100 d-flex justify-content-between align-items-center mt-3 login-action-btn"
@@ -162,7 +162,7 @@ const Register = () => {
 
             </form>
 
-            {/* Back to Login Redirection */}
+            
             <div className="mt-4 pt-2">
               <Link 
                 to="/login" 
@@ -173,7 +173,7 @@ const Register = () => {
             </div>
           </div>
 
-          {/* Right Column: Model Cut-out Preview Display */}
+          
           <div 
             className="col-lg-7 d-none d-lg-block h-100 position-relative text-center"
             style={{ zIndex: 1 }}

@@ -66,7 +66,7 @@ const Products = ({ addToCart, productItems }) => {
             <div className="col-lg-3 col-md-6 col-sm-6 col-12" key={item.id}>
               <div className="boutiqueProductCard">
                 
-                {/* 4. IMAGE FRAME PAR CLICK TRIGGER LAGAYA */}
+         
                 <div 
                   className="productImageFrame position-relative"
                   onClick={() => handleNavigateToDetails(item.id)}
@@ -75,11 +75,11 @@ const Products = ({ addToCart, productItems }) => {
                   <span className="floatingProductBadge">{item.badge}</span>
                   <img src={item.img} alt={item.title} className="boutiqueImg" />
 
-                  {/* Desktop Hover Button */}
+                
                   <div className="cartHoverOverlay d-none d-md-flex">
                     <button
                       className="hoverCartBtn btn"
-                      onClick={(e) => handleAddClick(e, item)} // Event (e) pass kiya stopPropagation ke liye
+                      onClick={(e) => handleAddClick(e, item)} 
                     >
                       ADD TO CART
                     </button>
@@ -88,7 +88,7 @@ const Products = ({ addToCart, productItems }) => {
 
                 <div className="productCardFooter text-center p-3 d-flex flex-column justify-content-between">
                   <div>
-                    {/* 5. TITLE TEXT PAR BHI CLICK TRIGGER LAGAYA */}
+                   
                     <h4 
                       className="boutiqueItemTitle"
                       onClick={() => handleNavigateToDetails(item.id)}
@@ -103,11 +103,11 @@ const Products = ({ addToCart, productItems }) => {
                     </div>
                   </div>
 
-                  {/* Mobile Button */}
+                  
                   <div className="mobileButtonContainer d-block d-md-none mt-2">
                     <button
                       className="mobileCartBtn btn w-100"
-                      onClick={(e) => handleAddClick(e, item)} // Event (e) pass kiya
+                      onClick={(e) => handleAddClick(e, item)} 
                     >
                       ADD TO CART
                     </button>
